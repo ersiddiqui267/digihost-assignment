@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  border-bottom: 1px solid #ccc;
+}
+
+section[class^="main"] {
+  min-height: 100vh;
+}
+
+h6[class*="heading"] {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.featured--img {
+  width: 300px;
+}
+
+figcaption {
+  margin-top: 1rem;
+}
+
+.btn,
+.form-control {
+  border-radius: 0;
+}
+
+.grid-item-1 {
+  grid-area: pool;
+}
+.grid-item-2 {
+  grid-area: volley;
+}
+.grid-item-3 {
+  grid-area: golf;
+}
+.grid-item-4 {
+  grid-area: rugby;
+}
+.grid-item-5 {
+  grid-area: cycle;
+}
+
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto auto;
+  /* align-items: stretch; */
+  grid-template-areas:
+    "pool"
+    "volley"
+    "golf"
+    "rugby"
+    "cycle";
+}
+
+.alert {
+  position: fixed;
+  bottom: 2rem;
+  max-width: 260px;
+  border-radius: 0;
+  z-index: 10;
+  word-wrap: break-word;
+}
+
+@media screen and (min-width: 576px) {
+  .grid-container {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "pool pool"
+      "volley golf"
+      "rugby cycle";
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .featured--img {
+    width: auto;
+  }
+
+  .grid-container {
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "pool pool volley golf"
+      "pool pool rugby cycle";
+  }
+
+  .object-fit {
+    height: 85%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  section[class^="main"] {
+    padding: 0 1rem;
+  }
+
+  .object-fit {
+    height: 90%;
+  }
+}

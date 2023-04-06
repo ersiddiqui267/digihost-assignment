@@ -13,77 +13,172 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/src/style/index.css" />
+
+    <script defer src="/src/js/index.js"></script>
   </head>
   <body>
+    <!-- HERO -->
     <div class="container-fluid">
-      <!-- HERO -->
-      <section
-        class="hero d-flex flex-column justify-content-start justify-content-sm-evenly align-items-center py-5"
-      >
-        <!-- HEADING -->
+      <section class="main--hero d-flex flex-column align-items-center">
+        <!-- HERO-HEADING -->
         <h6 class="hero--heading display-6">
           One-stop shop for all your sports needs
         </h6>
 
-        <!-- IMAGES -->
-        <div class="hero--img-container row justify-content-center my-5">
-          <figure class="col-6 col-sm-4 col-md-3">
+        <!-- HERO-IMAGES -->
+        <div class="hero--main-img-container row justify-content-center">
+          <figure class="hero--img-container col-6 col-sm-4 col-md-3">
             <img
               class="hero--img img-fluid"
               src="/src/img/cricket-ball.jpg"
               alt="cricket ball"
             />
           </figure>
-          <figure class="col-6 col-sm-4 col-md-3">
+          <figure class="hero--img-container col-6 col-sm-4 col-md-3">
             <img
               class="hero--img img-fluid"
               src="/src/img/goggles.jpg"
               alt="swimming goggles"
             />
           </figure>
-          <figure class="col-6 col-sm-4 col-md-3">
+          <figure class="hero--img-container col-6 col-sm-4 col-md-3">
             <img
               class="hero--img img-fluid"
               src="/src/img/dart-board.jpg"
-              alt="swimming goggles"
+              alt="dart board"
             />
           </figure>
         </div>
 
         <!-- BUTTON -->
-        <button type="button" class="btn btn-outline-dark rounded-0">
+        <button
+          type="button"
+          class="btn-shop btn btn-outline-dark mt-3 mt-sm-5"
+        >
           Shop Now
         </button>
       </section>
 
       <!-- FEATURED -->
+      <section class="main--featured">
+        <!-- FEATURED-HEADING -->
+        <h6 class="featured--heading display-6 my-4 my-md-5">
+          Featured Products
+        </h6>
 
-      <section
-        class="featured d-flex flex-column justify-content-start align-items-center py-5"
-      >
-        <h6 class="featured--heading display-6 border">Featured Products</h6>
+        <!-- FEATURED-IMAGES -->
         <div
-          class="featured--img-container align-self-stretch d-flex flex-column align-items-center justify-content-around flex-sm-row border"
+          class="featured--main-img-container row flex-column flex-md-row align-items-center"
         >
-          <figure class="border px-3">
+          <figure class="featured--img-container col-sm-6 text-center">
             <img
               class="featured--img img-fluid"
               src="/src/img/gloves.jpg"
-              alt="nike leather gloves"
+              alt="nike gloves"
             />
-            <figcaption>Nike Leather Gloves</figcaption>
+            <figcaption>
+              Nike Leather Gloves <span class="d-block">$20</span>
+            </figcaption>
           </figure>
-          <figure class="px-3">
+          <figure class="featured--img-container col-sm-6 text-center">
             <img
               class="featured--img img-fluid"
               src="/src/img/football.jpg"
-              alt="nike leather gloves"
+              alt="cricket ball"
             />
-            <figcaption>Adidas Official FIFA Football</figcaption>
+            <figcaption>
+              Adidas Official FIFA Football <span class="d-block">$45</span>
+            </figcaption>
           </figure>
         </div>
       </section>
+
+      <!-- NEWSLETTER -->
+      <section class="newsletter row align-items-sm-end pb-5">
+        <!-- NEWSLETTER-TEXT -->
+        <div class="newsletter--text col-sm-6 col-md-7 col-xl-8 px-xl-5">
+          <h6 class="newsletter--heading text-start mb-1 display-6">
+            Newsletter
+          </h6>
+          <p class="newsletter--para">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Necessitatibus ipsum dignissimos reprehenderit nesciunt magnam
+            maiores odio autem explicabo. Fuga, repudiandae blanditiis dicta
+            adipisci perferendis animi voluptatum minus natus soluta odio.
+          </p>
+        </div>
+
+        <!-- NEWSLETTER-FORM -->
+        <form
+          class="newsletter--form col-sm-6 col-md-5 col-xl-4 d-grid gap-3 px-md-4 d-lg-flex"
+        >
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Email Address"
+            required
+          />
+          <input type="submit" class="btn btn-secondary" value="Subscribe" />
+        </form>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section
+        class="main--products d-flex justify-content-center align-items-center mt-4"
+      >
+        <div class="products--main-img-container grid-container">
+          <figure class="products--img-container grid-item-1">
+            <img
+              class="products--img img-fluid object-fit"
+              src="/src/img/pool.jpg"
+              alt="pool table"
+            />
+            <figcaption>
+              Pool Table <span class="d-block">$500</span>
+            </figcaption>
+          </figure>
+
+          <figure class="products--img-container grid-item-2">
+            <img
+              class="products--img img-fluid"
+              src="/src/img/volleyball.jpg"
+              alt="volley ball"
+            />
+            <figcaption>
+              Volley Ball <span class="d-block">$40</span>
+            </figcaption>
+          </figure>
+
+          <figure class="products--img-container grid-item-3">
+            <img
+              class="products--img img-fluid"
+              src="/src/img/golf.jpg"
+              alt="golf"
+            />
+            <figcaption>Golf Stick <span class="d-block">$35</span></figcaption>
+          </figure>
+
+          <figure class="products--img-container grid-item-4">
+            <img
+              class="products--img img-fluid"
+              src="/src/img/rugby.jpg"
+              alt="rugby ball"
+            />
+            <figcaption>Rugby Ball <span class="d-block">$40</span></figcaption>
+          </figure>
+
+          <figure class="products--img-container grid-item-5">
+            <img
+              class="products--img img-fluid"
+              src="/src/img/cycle.jpg"
+              alt="cycle"
+            />
+            <figcaption>BMX <span class="d-block">$430</span></figcaption>
+          </figure>
+        </div>
+      </section>
+      <div class="alert text-bg-success shadow-lg d-none"></div>
     </div>
   </body>
 </html>
